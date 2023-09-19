@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Kalkulator Tombol</title>
+<head>
+<body>
+    <div>
+        <input type="number" id="bilangan1">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="bilangan2">
+        <span>=</span>
+        <span id="hasil">hasil</span><br><br>
+        <button id="submit">submit</button>
+    </div>
+    <script>
+        const bilangan1 = document.getElementById('bilangan1')
+        const bilangan2 = document.getElementById('bilangan2')
+        const operator = document.getElementById('operator')
+        const hasil = document.getElementById('hasil')
+        const submit = document.getElementById('submit')
+
+        submit.addEventListener('click', function(){
+            hasil.innerText = eval(bilangan1.value + operator.value + bilangan2.value)
+        })
+    </script>
+</body>
+</html>
+
